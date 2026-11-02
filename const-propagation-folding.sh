@@ -6,6 +6,6 @@ if [ $# -ne 1 ]; then
 fi
 
 inputname=$1
-outname=${inputname%".ll"}_sccp.ll
+outname=${inputname%".ll"}-sccp.ll
 
 opt -passes=sccp -S $inputname -o $outname

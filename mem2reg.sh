@@ -6,6 +6,6 @@ if [ $# -ne 1 ]; then
 fi
 
 inputname=$1
-outname=${inputname%".ll"}_mem2reg.ll
+outname=${inputname%".ll"}-mem2reg.ll
 
 opt -passes=mem2reg -S $inputname -o $outname

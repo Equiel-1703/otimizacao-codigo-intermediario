@@ -6,6 +6,6 @@ if [ $# -ne 1 ]; then
 fi
 
 inputname=$1
-outname=${inputname%".ll"}_early-cse.ll
+outname=${inputname%".ll"}-early-cse.ll
 
 opt -passes=early-cse -S $inputname -o $outname

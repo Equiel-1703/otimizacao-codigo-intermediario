@@ -6,6 +6,6 @@ if [ $# -ne 1 ]; then
 fi
 
 inputname=$1
-outname=${inputname%".ll"}_dce.ll
+outname=${inputname%".ll"}-dce.ll
 
 opt -passes=dce -S $inputname -o $outname
